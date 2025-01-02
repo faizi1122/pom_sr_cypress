@@ -1,0 +1,10 @@
+{
+  "validUser": {
+    "username": "faizan.iqbal@technogenics.io",
+    "password": "p@ssword4SReady"
+  },
+  "invalidUser": {
+    "username": "faizan.iqbal@technogenics.io",
+    "password": "wrongPassword"
+  }
+}
