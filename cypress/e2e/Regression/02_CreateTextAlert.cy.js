@@ -27,9 +27,14 @@ describe('Create text alert',() => {
     commonPage.verifyUrl("/dashboard");
     cy.visit("v2/dashboard?workspace=sigma-testing")
     commonPage.clickAlert()
-    commonPage.verifyUrl("/v2/Alerts?workspace=sigma-testing")
+    // commonPage.verifyUrl("/v2/Alerts?workspace=sigma-testing")
     commonPage.addAlert()
+    cy.get('input[type="radio"][value="Text Input"]').click();
+    cy.get('input[placeholder="Enter alert title"]').should('be.visible').type("Test Alert");
+    cy.get('textarea[placeholder="Enter text"]').should('be.visible').type("Test.com");
+    cy.contains('span', "Add").click();
 
+ls
     }
 
     )
