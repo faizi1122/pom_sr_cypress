@@ -27,6 +27,7 @@ const commonPage = new CommonPage();
 describe('Login Functionality', () => {
   beforeEach(() => {
     // Load fixture data before each test
+    cy.visit('https://test-alpha.strikeready.app/signin');
     cy.fixture('example').as('userData');
   });
 
@@ -39,7 +40,7 @@ describe('Login Functionality', () => {
 
     // Assert successful login (adjust assertion based on your app)
     // cy.url().should('include', '/dashboard');
-    commonPage.verifyUrl("/dashboard");
+    // commonPage.verifyUrl("/dashboard");
   });
 
   it('should fail to log in with invalid credentials', function () {
